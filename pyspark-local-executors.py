@@ -16,3 +16,6 @@ spark = SparkSession.builder.appName('SparkByExamples.com').getOrCreate()
 sc = spark._jsc.sc()
 n_workers = len([executor.host() for executor in sc.statusTracker().getExecutorInfos()]) - 1
 print(n_workers)
+
+print('Apache Spark Version :'+spark.version)
+print('Apache Spark Version :'+spark.sparkContext.version)
